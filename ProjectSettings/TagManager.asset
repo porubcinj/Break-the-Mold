@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Tilemap
+  - Agent
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Tilemap
+  - Water
+  - UI
+  - Team0_0
+  - Team0_1
+  - Team0_2
+  - Team0_3
+  - Team0_4
+  - Team0_5
+  - Team0_6
+  - Team0_7
+  - Team0_8
+  - Team0_9
+  - Team0_10
+  - Team0_11
+  - Team1_0
+  - Team1_1
+  - Team1_2
+  - Team1_3
+  - Team1_4
+  - Team1_5
+  - Team1_6
+  - Team1_7
+  - Team1_8
+  - Team1_9
+  - Team1_10
+  - Team1_11
+  - Team0
+  - Team1
+  m_SortingLayers:
+  - name: Outline
+    uniqueID: 526072821
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 3970321911
+    locked: 0
+  m_RenderingLayers:
+  - Default

@@ -1,0 +1,61 @@
+behaviors:
+  AgentBehavior:
+    trainer_type: poca
+    summary_freq: 50000
+    time_horizon: 256
+    max_steps: 5e7
+    keep_checkpoints: 5
+    even_checkpoints: false
+    checkpoint_interval: 500000
+    threaded: false
+
+    network_settings:
+      hidden_units: 128
+      num_layers: 2
+      normalize: false
+      vis_encode_type: simple
+      conditioning_type: hyper
+
+    hyperparameters:
+      # Common Trainer Configurations
+      learning_rate: 3e-4
+      batch_size: 2048
+      buffer_size: 131072
+      learning_rate_schedule: linear
+
+      # PPO/MA-POCA-specific Configurations
+      beta: 5.0e-3
+      epsilon: 0.2
+      lambd: 0.99
+      num_epoch: 3
+
+    reward_signals:
+      extrinsic:
+        strength: 1.0
+        gamma: 0.99
+
+    self_play:
+      save_steps: 100000
+      swap_steps: 50000
+      window: 30
+      play_against_latest_model_ratio: 0.5
+      initial_elo: 1200.0
+
+checkpoint_settings:
+  run_id: poca
+  force: false
+
+engine_settings:
+  width: 84
+  height: 84
+  quality_level: 1
+  time_scale: 1
+  target_frame_rate: -1
+  capture_frame_rate: 60
+  no_graphics: true
+  no_graphics_monitor: true
+
+env_settings:
+  num_envs: 1
+  num_areas: 9
+  seed: 42
